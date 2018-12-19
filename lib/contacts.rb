@@ -18,7 +18,7 @@ def remove_strawberry(contacts)
   contacts.each do |contact, values|
     values.each do |label, value|
       if (value.include? 'strawberry')
-        contacts[contact][label] - ['strawberry']
+        contacts[contact][label].delete('strawberry')
       end
     end
   end
