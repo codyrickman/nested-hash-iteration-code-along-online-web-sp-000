@@ -16,8 +16,10 @@ require 'pry'
 
 def remove_strawberry(contacts)
   contacts.each do |contact, values|
-    if (contact[:favorite_ice_cream_flavors].include? 'strawberry')
-      contact[:favorite_ice_cream_flavors] - ['strawberry']
+    values.each do |label, value|
+      if (value.include? 'strawberry')
+        contact[:favorite_ice_cream_flavors] - ['strawberry']
+      end
     end
   end
   return contacts
