@@ -18,7 +18,7 @@ def remove_strawberry(contacts)
   contacts.each do |contact, values|
     values.each do |label, value|
       if (value.include? 'strawberry')
-        contact[:favorite_ice_cream_flavors] - ['strawberry']
+        value - ['strawberry']
       end
     end
   end
